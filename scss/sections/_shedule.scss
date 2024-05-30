@@ -1,0 +1,224 @@
+.schedule {
+    padding-bottom: 197px;
+    overflow: visible;
+}
+
+.schedule__wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.schedule__image-wrap {
+    width: 500px;
+    min-width: 500px;
+    height: 528px;
+    position: relative;
+    background-color: #fff;
+    &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: url(../assets/images/bg.png) no-repeat center / cover;
+        z-index: 10;
+        mix-blend-mode: color-burn;
+        opacity: .7;
+        animation: flicker .05s linear infinite;
+    }
+    &::after {
+        content: "";
+        width: 406px;
+        height: 438px;
+        position: absolute;
+        top: 36px;
+        left: 22px;
+        background: url(../assets/images/shedule/paper.png) no-repeat center top;
+    }
+}
+
+.shedule__img {
+    position: absolute;
+    &--1 {
+        top: 85px;
+        left: 74px;
+        z-index: 5;
+    }
+    &--2 {
+        top: 20px;
+        right: 24px;
+        z-index: 1;
+    }
+    &--3 {
+        bottom: -66px;
+        right: 72px;
+        transform: rotate(41deg);
+        z-index: 6;
+    }
+    &--4 {
+        top: -23px;
+        left: -13px;
+        transform: scale(1.08);
+        z-index: 1;
+    }
+    &--5 {
+        bottom: 0;
+        left: -20px;
+        z-index: 6;
+    }
+}
+
+.schedule__text {
+    padding-left: 17px;
+}
+
+.schedule__list {
+    margin-top: 56px;
+    margin-bottom: 48px;
+    font-size: 20px;
+}
+
+.schedule__item {
+    border-bottom: 2px solid #d0d0d0;
+    display: flex;
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
+.schedule__key,
+.schedule__value {
+    display: block;
+    padding: 15px 0;
+}
+
+.schedule__key {
+    padding-right: 16px;
+    color: rgba(49, 49, 49, .7);
+    width: 43%;
+}
+
+.schedule__value {
+    padding-left: 16px;
+    border-left: 2px solid #d0d0d0;
+    font-weight: 600;
+}
+
+.schedule__item:first-child .schedule__key,
+.schedule__item:first-child .schedule__value {
+    padding-top: 0;
+}
+
+.schedule__item:last-child .schedule__key,
+.schedule__item:last-child .schedule__value {
+    padding-bottom: 0;
+}
+
+@media (max-width: 1024px) {
+    .schedule__text {
+        padding-left: 0;
+        margin-top: 26px;
+        br {
+            display: none;
+        }
+    }
+
+    .schedule__list {
+        margin-top: 38px;
+        margin-bottom: 22px;
+    }
+
+    .schedule__item {
+        display: block;
+        padding-bottom: 16px;
+        padding-top: 16px;
+        &:first-child {
+            padding-top: 0;
+        }
+    }
+
+    .schedule__item--inline {
+        .schedule__value,
+        .schedule__key {
+            display: inline;
+        }
+        .schedule__value {
+            margin-left: 8px;
+        }
+    }
+
+    .schedule__key,
+    .schedule__value {
+        padding: 0;
+        width: 100%;
+    }
+
+    .schedule__key {
+        margin-bottom: 10px;
+    }
+
+    .schedule__value {
+        border-left: none;
+    }
+
+    .schedule__image {
+        width: 100%;
+        min-width: 100%;
+        margin-bottom: 28px;
+    }
+
+    .schedule__image-wrap {
+        width: 375px;
+        min-width: 375px;
+        height: 380px;
+        margin-left: -20px;
+        &::after {
+            content: "";
+            width: 286px;
+            height: 310px;
+            position: absolute;
+            top: 26px;
+            left: 37px;
+            background: url(../assets/images/shedule/paper.png) no-repeat center top;
+        }
+    }
+    
+    .shedule__img {
+        &--1 {
+            top: 10px;
+            left: 24px;
+            transform: scale(.7);
+        }
+        &--2 {
+            top: -19px;
+            right: 2px;
+            transform: scale(0.7);    
+        }
+        &--3 {
+            bottom: -73px;
+            right: 26px;
+            transform: rotate(40deg) scale(0.7);
+        }
+        &--4 {
+            top: -21px;
+            left: -1px;
+            transform: scale(1);
+        }
+        &--5 {
+            bottom: -27px;
+            left: -32px;
+            transform: scale(.72);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .schedule {
+        padding-bottom: 120px;
+    }
+    .schedule__wrap {
+        display: block;
+    }
+}

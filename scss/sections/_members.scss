@@ -1,0 +1,113 @@
+.members {
+    padding-bottom: 140px;
+    overflow: hidden;
+}
+
+.members__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.members__title {
+    width: 60%;
+}
+
+.members__nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.members__list {
+    display: flex;
+    column-gap: 20px;
+    width: 100%;
+    margin-top: 55px;
+    transition: transform .5s ease-in-out;
+}
+
+.memers__item {
+    min-width: 394px;
+}
+
+.member {
+    text-align: center;
+}
+
+.member__image {
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    background: #424241 url(../assets/images/stages/paper.png) no-repeat center / cover;
+    margin: 0 auto 28px;
+}
+
+.member__avatar {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.member__name {
+    display: block;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.memers__status {
+    display: block;
+    font-size: 20px;
+    color: rgba(49, 49, 49, .6);
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .members {
+        padding-bottom: 100px;
+    }
+    .members__title {
+        line-height: 1.2;
+    }
+
+    .members__wrap {
+        justify-content: center;
+    }
+
+    .members__title {
+        order: 1;
+        width: 100%;
+    }
+
+    .members .slider {
+        order: 2;
+    }
+
+    .members__list {
+        margin-top: 38px;
+        margin-bottom: 40px;
+    }
+    
+    .members__nav {
+        order: 3;
+    }
+
+    .memers__item {
+        min-width: 100%;
+    }
+
+    .member__image {
+        width: 244px;
+        height: 244px;
+    }
+
+    .member__avatar {
+        transform: translateX(-50%) scale(.9);
+        top: 7px;
+    }
+
+}

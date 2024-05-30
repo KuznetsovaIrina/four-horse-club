@@ -1,0 +1,48 @@
+body {
+    color: #313131;
+    font-family: 'Golos Text', sans-serif;
+}
+
+.title {
+    font-family: 'Merriweather';
+    font-size: 36px;
+    text-transform: uppercase;
+    line-height: 1.4;
+}
+
+.title--big {
+    font-size: 54px;
+}
+
+.text-attention {
+    color: #f54932;
+    font-weight: 700;
+}
+
+.text-note {
+    color: #3057a2;
+    font-size: 20px;
+    font-family: 'Golos Text';
+    text-transform: none;
+}
+
+.text-crossed-out {
+    text-decoration: line-through 2px #f54932;
+    margin-right: 8px;
+}
+
+.text-nowrap {
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 28px;
+    }
+    .text-note {
+        font-size: 18px;
+    }
+    .title--big {
+        font-size: 36px;
+    }
+}

@@ -1,0 +1,25 @@
+.header-page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 245px;
+}
+
+@media (max-width: 768px) {
+    .header-page {
+        height: 65px;
+    }
+    .logo {
+        width: 213px;
+    }
+}
